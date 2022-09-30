@@ -1,0 +1,22 @@
+.swiper {
+    width: 100%;
+    height: auto;
+}
+.swiper-slide {
+  font-size: 18px;
+  background: #fff;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swiper-slide h1{
+    width: 90%;
+    display: block;
+    margin: auto;
+}
+
+.swiper-pagination-bullet-active
+{
+  background: #72493fd2 !important;
+}

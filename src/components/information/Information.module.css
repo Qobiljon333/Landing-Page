@@ -1,0 +1,21 @@
+/* Slider{
+    width: 100%;
+}
+Slider div{
+    width: 750px;
+    height: 65vh;
+}
+.imgg{
+    width: 750px;
+    height: 65vh;
+} */
+
+.teamImage::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .teamImage {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }

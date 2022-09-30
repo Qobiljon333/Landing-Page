@@ -1,0 +1,9 @@
+.orange_bg{
+    background: rgb(235,91,37);
+}
+.extraInfo:first-child{
+    border-top: 2px solid #000 !important;
+}
+.info{
+    transition: 1s;
+}
