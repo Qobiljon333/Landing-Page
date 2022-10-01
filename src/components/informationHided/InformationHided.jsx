@@ -9,7 +9,7 @@ const InformationHided = () => {
   const [state,setState ] = useState(false)
 
   return (
-    <div className={s.orange_bg} >
+    <div id='Values' className={s.orange_bg} >
       <div className='w-full  xl:p-16 flex flex-wrap opacity-1  '>
 
       <div className="xl:w-1/2">
@@ -23,12 +23,12 @@ const InformationHided = () => {
             EXTRAINFO.map(({name,info},inx)=>(
               <div onClick={()=>{
                 setExtraInfo(name)
-                setState(j=> !j)
+                setState(j=>  extraInfo === name ? !j : j = true )
               } } 
               className='py-7 px-5 extraInfo border-t-2 border-black' key={inx}>
                <div className="flex"> <h1 className='text-4xl flex-1'>{name}</h1>
                 {
-                  state && extraInfo === name ? <AiOutlineMinusCircle onClick={()=> setState(j => !j)} className='text-3xl mr-5' /> : <AiOutlinePlusCircle className='text-3xl mr-5'/>
+                  state && extraInfo === name ? <AiOutlineMinusCircle onClick={()=> setState(j => !j)} className='text-3xl mr-5' /> : <AiOutlinePlusCircle  className='text-3xl mr-5'/>
                 }</div>
                 <div onClick={()=> setExtraInfo("")}  className={`info transitionn overflow-hidden ${state && extraInfo === name ? "h-[200px]" :"h-0"}`}>
                   <p className='text-[25px] mt-5'>{info}</p>
