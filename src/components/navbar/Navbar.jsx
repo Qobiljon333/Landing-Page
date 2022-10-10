@@ -14,6 +14,20 @@ const Navbar = () => {
     const [menuClick,setMenuClick] = useState(false)
     const [menuClickLaptop,setMenuClickLaptop] = useState(false)
     console.log(menuClickLaptop);
+
+    const navigation = [
+
+        { name: 'Our Products', href: '#our-products', current: false },
+        { name: '4CR', href: '#4CR', current: false },
+        { name: 'Team', href: '#team', current: false },
+        { name: 'Values', href: '#values', current: false },
+        { name: 'Distributors', href: '#Distributors', current: false },
+      ]
+      function classNames(...classes) {
+        return classes.filter(Boolean).join(' ')
+      }
+      
+
   return (
     <div className={`w-full z-50 overflow-hidden`}>
         <div className="w-full bg-zinc-900 h-12 hidden px-16 items-center justify-between xl:flex">
@@ -45,15 +59,34 @@ const Navbar = () => {
                         }
                     </div>
               </div>
-                {
+              
+              <div className="ml-10 flex items-baseline space-x-4">
+                        {navigation.map((item) => (
+                          <a
+                            key={item.name}
+                            href={item.href}
+                            className={classNames(
+                              item.current
+                                ? 'bg-gray-900 text-white'
+                                : 'text-black hover:bg-gray-700 hover:text-white',
+                              'px-3 py-2 rounded-md text-sm font-medium'
+                            )}
+                            aria-current={item.current ? 'page' : undefined}
+                          >
+                            {item.name}
+                          </a>
+                        ))}
+                      </div>
+
+                {/* {
                     NAVCATEGORYS.map((name,inx)=>(
                         <h1 key={inx} className='2xl:text-[21px]  xl:text-[18px]  mr-10'>{name}</h1>
                     ))
-                }
+                } */}
                
             </div>
                 <div className="flex-1"></div>
-            <select className='items-center border-2 px-4 flex  justify-center outline-none pr-4 mx-12 border-black border-solid p-2' name="language" id="">
+            <select className='items-center border-2 px-4  hidden lg:block  justify-center outline-none pr-4 mx-12 border-black border-solid p-2' name="language" id="">
                     <option value="English">Eng</option>
                     <option value="Italy">It</option>
                     <option value="Russian">Ru</option>
@@ -69,8 +102,8 @@ const Navbar = () => {
                 
                 </div> 
 
-                <div className={`ModalCategory z-40 transition-all fixed top-[5.5rem] right-0 ${menuClick? "h-[550px ]  border-t-[2px]": "h-[0px] "} w-full overflow-hidden pl-14 border-solid border-gray-400 border-r-[2px]  bg-white`}>
-                <div onMouseEnter={()=> setProState(true)} onMouseLeave={()=>setProState(false)} className="flex relative  hover:cursor-pointer items-center mr-10"> <h1 className='text-[21px]  inline'  >Products </h1> <RiArrowRightSFill className={`text-[30px]  transition-all ${proState ? "rotate-90":""}`} />
+                <div className={`ModalCategory z-40 transition-all fixed top-[5.5rem] right-0 ${menuClick? "h-[550px ]  border-t-[2px]": "h-[0px] "} w-full overflow-hidden  border-solid border-gray-400 border-r-[2px]  bg-white`}>
+                {/* <div onMouseEnter={()=> setProState(true)} onMouseLeave={()=>setProState(false)} className="flex relative  hover:cursor-pointer items-center mr-10"> <h1 className='text-[21px]  inline'  >Products </h1> <RiArrowRightSFill className={`text-[30px]  transition-all ${proState ? "rotate-90":""}`} />
                         <div className={`modalka  w-96 h-96 bg-black top-8 transition-all left-[-100px] absolute hover:cursor-default ${proState? "block":"hidden"}`}>
                             {
                                 PRODUCTS.map(({name},inx)=>(
@@ -78,12 +111,25 @@ const Navbar = () => {
                                 ))
                             }
                         </div>
-                   </div>
-                        {
-                            NAVCATEGORYS.map((name,inx)=>(
-                                <h1 key={inx} className='text-[21px]  mr-10'>{name}</h1>
-                            ))
-                        }
+                   </div> */}
+                   <div className="  items-baseline space-x-4">
+                        {navigation.map((item) => (
+                          <a
+                          onClick={()=>setMenuClick(false)}
+                            key={item.name}
+                            href={item.href}
+                            className={classNames(
+                              item.current
+                                ? 'bg-gray-900 text-white'
+                                : 'text-black block hover:bg-gray-700 hover:text-white',
+                              'px-3 py-2 rounded-md text-sm font-medium'
+                            )}
+                            aria-current={item.current ? 'page' : undefined}
+                          >
+                            {item.name}
+                          </a>
+                        ))}
+                      </div>
                       </div>
 
 

@@ -18,7 +18,7 @@ const InformationHided = () => {
         <p className='text-2xl ml-16 mr-16'>To become a complete supplier for car refinishing, we knew what to rely on. A philosophy of success told by our values and the color that represents us: 4CR orange.</p>
         <img className='m-16 xl:w-[135px]' src={img_no_limit} alt="" />
       </div>
-      <div className="xl:w-1/2 ">
+      <div id='values' className="xl:w-1/2 ">
           {
             EXTRAINFO.map(({name,info},inx)=>(
               <div onClick={()=>{

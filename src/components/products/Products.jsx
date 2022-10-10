@@ -4,7 +4,7 @@ import s from "./Products.module.css"
 const Products = () => {
   const[state,setState] = useState("")
   return (
-    <div className='w-full  bg-black p-16'>
+    <div id='our-products' className='w-full  bg-black p-16'>
         <h1 className='text-5xl text-white font-medium '>Our products</h1>
         <div className="flex flex-wrap mt-[110px]    w-full">
           {

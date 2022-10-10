@@ -21,7 +21,7 @@ const Information = () => {
     <div>
         <div className="book  w-full flex bg-yellow-50 flex-wrap">
           <div className="   w-full xl:w-1/2"><img className='w-[1281px]' src={book} alt="" /></div>
-          <div className=" xl:p-16 pl-16  w-full xl:w-1/2">
+          <div id='4CR' className=" xl:p-16 pl-16  w-full xl:w-1/2">
             <p className='text-lg mt-5 xl:mt-[280px] 2xl:mt-[400px] opacity-60 font-medium'>4CR CATALOGUE 2022-2023</p>
             <h1 className='text-5xl xl:w-[500px] 2xl:w-[550px] mb-12 leading-[55px]  mt-7'>Discover the new edition of our catalog.</h1>
               <Button dataa={"Learn more"} />
@@ -46,7 +46,9 @@ Let’s climb the summit together: where will we be tomorrow?</h1>
 
          <iframe className='xl:w-[85%] xl:h-[1000px] block m-auto'  src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F4CRcarrefinish%2Fvideos%2F2470544673040576%2F&show_text=0&width=560" width="90%" height="475"  scrolling="no" frameBorder="0" allowFullScreen allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
         </div>
-
+        <div id="team">
+          
+        </div>
         <p className='opacity-60 lg:mt-[150px] w-[100px] block m-auto '>Team</p>
         <h1 className='text-[50px]  block  mb-12 text-center   mt-7 mx-auto '>Us. Professionalism, passion, humanity.</h1>
 

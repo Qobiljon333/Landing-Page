@@ -17,7 +17,7 @@ const Banner = () => {
       <div className="w-full flex flex-wrap bg-[#F9F6EE]  ">
               <div className="  xl:p-16  w-full xl:w-1/2"><img src="https://4cr.com/wp-content/uploads/2022/08/01-Il-nostro-Business.webp" alt="" /></div>
               <div className="p-3 pt-16 w-full xl:w-1/2">
-            <p className='text-base tracking-[.2em]  text-black opacity-60 mt-5 font-medium   '>OUR Products</p>
+            <p id='our-business' className='text-base tracking-[.2em]  text-black opacity-60 mt-5 font-medium   '>OUR Products</p>
             <h1 className='text-5xl xl:w-[500px] 2xl:w-[700px] leading-[55px]  mt-3'>Our range covers every car refinishing need.</h1>
             <h1 className='text-2xl mb-7  xl:w-[480px] 2xl:w-[600px] leading-[35px]  mt-7'>Primers and clearcoats for bodywork, putties, abrasives, masking products, polishes and workshop equipment… <br /><br />
                 We offer more than products. We offer complete and integrable solutions, for an efficient and safe workflow. Together, we have optimized the painting, raising the quality bar. <br /><br />
